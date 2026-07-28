@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050b12"/>
+      <stop offset="55%" stop-color="#0a1a24"/>
+      <stop offset="100%" stop-color="#081420"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nodeLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="headGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e6fffb"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+  <circle cx="950" cy="90" r="220" fill="url(#glow1)"/>
+  <circle cx="1050" cy="280" r="180" fill="url(#glow2)"/>
+
+  <!-- faint grid -->
+  <g stroke="#1c3a4a" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="360"/>
+    <line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="800" y1="0" x2="800" y2="360"/>
+    <line x1="1000" y1="0" x2="1000" y2="360"/>
+  </g>
+
+  <!-- network of proxy nodes on right -->
+  <g>
+    <line x1="720" y1="90" x2="860" y2="60" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="860" y1="60" x2="990" y2="110" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="990" y1="110" x2="1100" y2="70" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="860" y1="60" x2="900" y2="180" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="900" y1="180" x2="1050" y2="220" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="990" y1="110" x2="1050" y2="220" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="1050" y1="220" x2="1130" y2="270" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="900" y1="180" x2="780" y2="240" stroke="url(#nodeLine)" stroke-width="2"/>
+    <line x1="780" y1="240" x2="900" y2="290" stroke="url(#nodeLine)" stroke-width="2"/>
+
+    <circle cx="720" cy="90" r="6" fill="#34d399"/>
+    <circle cx="860" cy="60" r="7" fill="#22d3ee"/>
+    <circle cx="990" cy="110" r="6" fill="#34d399"/>
+    <circle cx="1100" cy="70" r="8" fill="#22d3ee"/>
+    <circle cx="900" cy="180" r="6" fill="#22d3ee"/>
+    <circle cx="1050" cy="220" r="7" fill="#34d399"/>
+    <circle cx="1130" cy="270" r="6" fill="#22d3ee"/>
+    <circle cx="780" cy="240" r="5" fill="#34d399"/>
+    <circle cx="900" cy="290" r="6" fill="#22d3ee"/>
+
+    <text x="868" y="45" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#67e8f9" opacity="0.85">203.0.113.7:8080</text>
+    <text x="905" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#6ee7b7" opacity="0.85">198.51.100.2:3128</text>
+    <text x="960" y="235" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#67e8f9" opacity="0.85">192.0.2.15:1080</text>
+    <text x="700" y="80" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#6ee7b7" opacity="0.75">45.33.2.9:8888</text>
+  </g>
+
+  <!-- funnel shape suggesting filtering / grabbing -->
+  <g opacity="0.55">
+    <polygon points="60,150 260,150 200,200 120,200" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <polygon points="120,200 200,200 175,235 145,235" fill="none" stroke="#34d399" stroke-width="2"/>
+    <line x1="160" y1="235" x2="160" y2="260" stroke="#34d399" stroke-width="2"/>
+    <polygon points="140,260 180,260 160,285" fill="#34d399" opacity="0.7"/>
+  </g>
+
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="82" font-weight="700" fill="url(#headGrad)" textLength="700" lengthAdjust="spacingAndGlyphs">Proxy Grabber</text>
+
+  <text x="60" y="210" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#a5f3fc" opacity="0.92" textLength="980" lengthAdjust="spacingAndGlyphs">Reads sources, processes proxy lists, exports clean</text>
+  <text x="60" y="240" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#a5f3fc" opacity="0.92" textLength="560" lengthAdjust="spacingAndGlyphs">IP:port files — no setup</text>
+
+  <line x1="60" y1="270" x2="480" y2="270" stroke="#22d3ee" stroke-width="2" opacity="0.5"/>
+  <circle cx="480" cy="270" r="4" fill="#22d3ee"/>
+</svg>
